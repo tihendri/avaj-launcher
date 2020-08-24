@@ -1,6 +1,7 @@
 package tihendri.Weather;
 
-import tihendri.Coordinates;
+import tihendri.Coordinates.Coordinates;
+
 import java.util.Random;
 
 /*
@@ -25,9 +26,17 @@ public class WeatherProvider {
 
     public String getCurrentWeather(Coordinates coordinates) {
         int randWeather = new Random().nextInt(weather.length);
-        randWeather = (coordinates.getHeight() > 20) ? randWeather++ : randWeather--;
-        randWeather = (randWeather < 0) ? 3 : randWeather;
-        randWeather = (randWeather > 3) ? 0 : randWeather;
+        if (coordinates.getHeight() > 20)
+            randWeather++;
+        else
+            randWeather--;
+        if (randWeather < 0)
+            randWeather = 3;
+        if (randWeather > 3)
+            randWeather = 0;
+//        randWeather = (coordinates.getHeight() > 20) ? randWeather++ : randWeather--;
+//        randWeather = (randWeather < 0) ? 3 : randWeather;
+//        randWeather = (randWeather > 3) ? 0 : randWeather;
         return weather[randWeather];
     }
 
