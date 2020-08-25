@@ -13,7 +13,7 @@ public class Coordinates {
     private int longitude;
 
     // default constructor
-    Coordinates(int longitude, int latitude, int height) {
+    public Coordinates(int longitude, int latitude, int height) {
         if (height > 100)
             this.height = 100;
 
@@ -43,4 +43,19 @@ public class Coordinates {
         return this.longitude;
     }
 
+    // setters
+    public void setHeight(int height) {
+        if (this.height > 100)
+            this.height = 100;
+        else
+            this.height = height;
+    }
+
+    public void setLatitude(int latitude1) {
+        this.latitude = latitude1;
+    }
+
+    public void setLongitude(int longitude1){
+        this.longitude = longitude1;
+    }
 }
