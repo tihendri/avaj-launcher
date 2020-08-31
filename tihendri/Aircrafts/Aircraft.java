@@ -20,7 +20,7 @@ public class Aircraft
     }
 
     public Coordinates getCoordinates() {
-        return this.coordinates;
+        return coordinates;
     }
 
     protected Aircraft(String type, Coordinates coordinates)
@@ -28,7 +28,7 @@ public class Aircraft
         this.type = type;
         this.coordinates = coordinates;
         if (coordinates.getHeight() > 0) {
-            this.aircraftId = nextId();
+            aircraftId = nextId();
         }
     }
 
@@ -39,7 +39,7 @@ public class Aircraft
     public String getId() {
 
         try {
-            return String.valueOf(this.aircraftId);
+            return String.valueOf(aircraftId);
         } catch (Exception e) {
             System.out.println("There was an error when converting integer to String");
             System.exit(0);
