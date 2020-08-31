@@ -5,7 +5,7 @@ import tihendri.Interface.Flyable;
 import java.util.ArrayList;
 
 public class Tower {
-    private final ArrayList<Flyable> observers = new ArrayList<>();
+    protected final ArrayList<Flyable> observers = new ArrayList<>();
 
     public void register(Flyable flyable) {
         if (flyable.getCoordinates().getHeight() > 0) {
@@ -23,10 +23,14 @@ public class Tower {
     protected void conditionsChanged() {
         for (int counter = 0; counter < observers.size(); counter++) {
             observers.get(counter).updateConditions();
-
             if (observers.get(counter).getCoordinates().getHeight() <= 0) {
                 observers.remove(counter);
                 counter--;
+            }
+            if (observers.isEmpty()) {
+                System.out.println();
+                System.out.println("All aircrafts have landed successfully.");
+                System.exit(0);
             }
         }
     }
