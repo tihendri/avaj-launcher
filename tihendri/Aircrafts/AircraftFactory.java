@@ -1,6 +1,7 @@
 package tihendri.Aircrafts;
 
 import tihendri.Coordinates.Coordinates;
+import tihendri.ErrorHandling.Exceptions.CustomException;
 import tihendri.Interface.Flyable;
 
 public class AircraftFactory {
@@ -16,9 +17,7 @@ public class AircraftFactory {
             case "JetPlane":
                 return new JetPlane(name, coordinates);
             default:
-                System.out.println((char)27 + "[33mError: UFO detected! We're DOOMED!!!" + (char)27 + "[0m");
-                System.exit(1);
-                return null;
+                throw new CustomException((char)27 + "[34mError(Code blue): UFO detected! They're here! The aliens are coming!!!" + (char)27 + "[0m");
         }
     }
 }
