@@ -5,12 +5,11 @@ import tihendri.Interface.Flyable;
 import tihendri.Weather.WeatherTower;
 
 public class Helicopter extends Aircraft implements Flyable {
-
     protected Helicopter(String type, Coordinates coordinates) {
         super(type, coordinates);
     }
 
-    private WeatherTower weatherTower = new WeatherTower();
+    private final WeatherTower weatherTower = new WeatherTower();
 
     @Override
     public void updateConditions() {
@@ -25,7 +24,7 @@ public class Helicopter extends Aircraft implements Flyable {
 
     @Override
     public String getName() {
-        return null;
+        return "Helicopter";
     }
 
     @Override
