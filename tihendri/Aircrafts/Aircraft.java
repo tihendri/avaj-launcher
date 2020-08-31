@@ -118,11 +118,11 @@ public class Aircraft
                 break;
             case "SNOW":
                 snowWeather(aircraftName);
-                System.out.println(aircraftName + "#" + aircraftType + '(' + airId + "): SJW: This snow has white privilege... xD ");
+                System.out.println(aircraftName + "#" + aircraftType + '(' + airId + "): SJW: This snow has white privilege... xD");
                 break;
             case "SUN":
                 sunWeather(aircraftName);
-                System.out.println(aircraftName + "#" + aircraftType + '(' + airId + "): Sun's out, guns out. But don't shoot me please... :[ ");
+                System.out.println(aircraftName + "#" + aircraftType + '(' + airId + "): Sun's out, guns out. But don't shoot me please... :[");
                 break;
             case "FOG":
                 fogWeather(aircraftName);

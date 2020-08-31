@@ -10,13 +10,13 @@ public class Tower {
     public void register(Flyable flyable) {
         if (flyable.getCoordinates().getHeight() > 0) {
             observers.add(flyable);
-            System.out.println("Tower says: " + flyable.getName() + "#" + flyable.getType() + '(' + flyable.getId() + ") registered to the weather tower.");
+            System.out.println("Tower says: " + flyable.getName() + "#" + flyable.getType() + '(' + flyable.getId() + ") has registered to the weather tower.");
         }
     }
 
     public void unregister(Flyable flyable) {
-        System.out.println(flyable.getName() + "#" + flyable.getType() + "(" + flyable.getId() + ")" + " landing.");
-        System.out.println("Tower says: " + flyable.getName() + "#" + flyable.getType() + "(" + flyable.getId() + ") unregistered from weather tower.");
+        System.out.println(flyable.getName() + "#" + flyable.getType() + "(" + flyable.getId() + ")" + " is landing...");
+        System.out.println("Tower says: " + flyable.getName() + "#" + flyable.getType() + "(" + flyable.getId() + ") has unregistered from weather tower.");
         System.out.println(flyable.getName() + "#" + flyable.getType() + "(" + flyable.getId() + ") Coordinates(Longitude = " + flyable.getCoordinates().getLongitude() + " and Latitude = " + flyable.getCoordinates().getLatitude() + ")");
     }
 
