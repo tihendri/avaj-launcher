@@ -13,33 +13,27 @@ public class WeatherProvider {
 
     // private properties
     private static WeatherProvider weatherProvider = new WeatherProvider();
-    private String[] weather = {"RAIN", "FOG", "SUN", "SNOW"};
-
-    // private constructor
-    private WeatherProvider() {
-    }
+    private final String[] weather = {"RAIN", "FOG", "SUN", "SNOW"};
 
     // public methods
     public static WeatherProvider getProvider() {
+        if (weatherProvider == null) {
+            weatherProvider = new WeatherProvider();
+        }
         return weatherProvider;
     }
 
     public String getCurrentWeather(Coordinates coordinates) {
         int randWeather = new Random().nextInt(weather.length);
-        if (coordinates.getHeight() > 20)
-            randWeather++;
-        else
-            randWeather--;
-        if (randWeather < 0)
+        if (coordinates.getHeight() > 20) {
+            randWeather = ++randWeather;
+        } else randWeather = --randWeather;
+        if (randWeather < 0) {
             randWeather = 3;
-        if (randWeather > 3)
+        }
+        if (randWeather > 3) {
             randWeather = 0;
-//        randWeather = (coordinates.getHeight() > 20) ? randWeather++ : randWeather--;
-//        randWeather = (randWeather < 0) ? 3 : randWeather;
-//        randWeather = (randWeather > 3) ? 0 : randWeather;
+        }
         return weather[randWeather];
     }
-
-
-
 }
