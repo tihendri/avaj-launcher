@@ -5,7 +5,7 @@ import tihendri.Interface.Flyable;
 import java.util.ArrayList;
 
 public class Tower {
-    protected final ArrayList<Flyable> observers = new ArrayList<>();
+    private final ArrayList<Flyable> observers = new ArrayList<>();
 
     public void register(Flyable flyable) {
         if (flyable.getCoordinates().getHeight() > 0) {

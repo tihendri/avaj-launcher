@@ -7,39 +7,39 @@ import tihendri.Weather.WeatherTower;
 
 public class Aircraft
 {
-    protected String type;
-    protected long aircraftId;
-    protected Coordinates coordinates;
+    String name;
+    long id;
+    Coordinates coordinates;
 
-    private static long counter = 0;
+    static long idCounter;
 
     private long nextId()
     {
-        counter += 1;
-        return (counter);
+        idCounter += 1;
+        return (idCounter);
     }
 
     public Coordinates getCoordinates() {
         return coordinates;
     }
 
-    protected Aircraft(String type, Coordinates coordinates)
+    protected Aircraft(String name, Coordinates coordinates)
     {
-        this.type = type;
+        this.name = name;
         this.coordinates = coordinates;
         if (coordinates.getHeight() > 0) {
-            aircraftId = nextId();
+            id = nextId();
         }
     }
 
     public String getType() {
-        return type;
+        return name;
     }
 
     public String getId() {
 
         try {
-            return String.valueOf(aircraftId);
+            return String.valueOf(id);
         } catch (Exception e) {
             System.out.println("There was an error when converting integer to String");
             System.exit(0);

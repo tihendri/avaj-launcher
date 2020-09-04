@@ -13,7 +13,7 @@ public class WeatherProvider {
 
     // private properties
     private static WeatherProvider weatherProvider = new WeatherProvider();
-    private final String[] weather = {"RAIN", "FOG", "SUN", "SNOW"};
+    private static String[] weather = {"RAIN", "FOG", "SUN", "SNOW"};
 
     // public methods
     public static WeatherProvider getProvider() {
