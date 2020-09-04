@@ -25,13 +25,11 @@ public class WeatherProvider {
 
     public String getCurrentWeather(Coordinates coordinates) {
         int randWeather = new Random().nextInt(weather.length);
-        if (coordinates.getHeight() > 20) {
-            randWeather = ++randWeather;
-        } else randWeather = --randWeather;
+        randWeather = coordinates.getHeight() > 23 ? ++randWeather : --randWeather;
         if (randWeather < 0) {
             randWeather = 3;
         }
-        if (randWeather > 3) {
+        else if (randWeather > 3) {
             randWeather = 0;
         }
         return weather[randWeather];
