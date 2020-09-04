@@ -37,7 +37,13 @@ public class Simulator {
                 do {
                     String fileContent = fileReader.nextLine();
                     if (fileContent != null) {
+                        if (fileContent.equals("")) {
+                            throw new CustomException((char)27 + "[031mError: That scenario file is not formatted correctly. Fix it or specify another file." + (char)27 + "[0m");
+                        }
                         String[] attributes = fileContent.split(" ");
+                        if (attributes.length != 5) {
+                            throw new CustomException((char)27 + "[031mError: That scenario file is not formatted correctly. Fix it or specify another file." + (char)27 + "[0m");
+                        }
                         ErrorAircraftValues.AircraftName(attributes);
                         ErrorAircraftValues.AircraftAttributesArePositive(attributes);
                         ErrorAircraftValues.AircraftAttributesAmount(attributes);
