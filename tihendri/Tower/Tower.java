@@ -27,11 +27,11 @@ public class Tower {
                 observers.remove(counter);
                 counter--;
             }
-            if (observers.isEmpty()) {
-                System.out.println();
-                System.out.println("All aircrafts have landed successfully.");
-                System.exit(0);
-            }
+        }
+        if (observers.isEmpty()) {
+            System.out.println();
+            System.out.println("All aircrafts have landed. The simulation is complete.");
+            System.exit(0);
         }
     }
 }
