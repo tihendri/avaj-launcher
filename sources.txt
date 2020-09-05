@@ -10,6 +10,6 @@
 ./tihendri/ErrorHandling/Exceptions/CustomException.java
 ./tihendri/Interface/Flyable.java
 ./tihendri/Simulator/Simulator.java
+./tihendri/Simulator/WeatherTower.java
 ./tihendri/Tower/Tower.java
 ./tihendri/Weather/WeatherProvider.java
-./tihendri/Weather/WeatherTower.java

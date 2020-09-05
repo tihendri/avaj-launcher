@@ -2,10 +2,10 @@ package tihendri.Aircrafts;
 
 import tihendri.Coordinates.Coordinates;
 import tihendri.Interface.Flyable;
-import tihendri.Weather.WeatherTower;
+import tihendri.Simulator.WeatherTower;
 
 public class Baloon extends Aircraft implements Flyable {
-    protected Baloon(String type, Coordinates coordinates) {
+    Baloon(String type, Coordinates coordinates) {
         super(type, coordinates);
     }
 

@@ -1,7 +1,7 @@
 package tihendri.Interface;
 
 import tihendri.Coordinates.Coordinates;
-import tihendri.Weather.WeatherTower;
+import tihendri.Simulator.WeatherTower;
 
 public interface Flyable
 {

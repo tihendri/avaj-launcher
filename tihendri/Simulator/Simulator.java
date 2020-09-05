@@ -5,7 +5,6 @@ import tihendri.ErrorHandling.ErrorAircraftValues;
 import tihendri.ErrorHandling.ErrorSimulationNumber;
 import tihendri.ErrorHandling.Exceptions.CustomException;
 import tihendri.Interface.Flyable;
-import tihendri.Weather.WeatherTower;
 
 import java.io.*;
 import java.util.Scanner;

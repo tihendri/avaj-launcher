@@ -2,12 +2,12 @@ package tihendri.Aircrafts;
 
 import tihendri.Coordinates.Coordinates;
 import tihendri.Interface.Flyable;
-import tihendri.Weather.WeatherTower;
+import tihendri.Simulator.WeatherTower;
 
 public class JetPlane extends Aircraft implements Flyable {
     private final WeatherTower weatherTower = new WeatherTower();
 
-    protected JetPlane(String type, Coordinates coordinates) {
+    JetPlane(String type, Coordinates coordinates) {
         super(type, coordinates);
     }
 

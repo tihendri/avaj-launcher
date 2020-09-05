@@ -3,15 +3,15 @@ package tihendri.Aircrafts;
 import tihendri.Coordinates.Coordinates;
 import tihendri.ErrorHandling.Exceptions.CustomException;
 import tihendri.Interface.Flyable;
-import tihendri.Weather.WeatherTower;
+import tihendri.Simulator.WeatherTower;
 
 public class Aircraft
 {
-    String name;
-    long id;
-    Coordinates coordinates;
+    protected String name;
+    protected long id;
+    protected Coordinates coordinates;
 
-    static long idCounter;
+    private static long idCounter;
 
     private long nextId()
     {
